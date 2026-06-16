@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create The Button</title>
+  </head>
+  <style>
+    #click {
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      border: none;
+      border-radius:5px;
+    }
+    .js-odd {
+      background-color: crimson;
+    }
+    .js-even {
+      background-color: greenyellow;
+    }
+  </style>
+  <body>
+    <button id="click" class="js-even" onclick="buttonShow()">0</button>
+    <script>
+      let num = 0;
+      function buttonShow() {
+        num++;
+        let button1 = document.querySelector("#click");
+        button1.innerText = num;
+        if (num % 2 === 0) {
+          button1.classList.remove("js-odd");
+          button1.classList.add("js-even");
+        } else {
+          button1.classList.remove("js-even");
+          button1.classList.add("js-odd");
+        }
+      }
+    </script>
+  </body>
+</html>

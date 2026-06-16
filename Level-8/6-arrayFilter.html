@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array  Filter</title>
+</head>
+<body>
+    <script>
+        let arr= [1,2,3,4,5,6,7,8,9,10];
+        arr = arr.filter((num, index) => {
+            if(num%2 === 1){
+                return true;
+            } 
+            else {
+                return  false;
+            } 
+        });
+        console.log(arr);
+        // let odd1 = arr.filter( (num, index) => num % 2 === 1 );
+        // console.log(odd1);
+    </script>
+</body>
+</html>

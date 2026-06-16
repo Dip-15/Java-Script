@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass By Refrene</title>
+</head>
+<body>
+    <script>
+        // pass by value
+        let m = 5;
+        let n = m;
+        console.log(`m = ${m}  n = ${n}`);
+        m = 8;
+        console.log(`m = ${m}  n = ${n}`);
+        // pass by refrences
+        let x = {num: 5};
+        let y = x;
+        console.log(`x=${x.num} , y=${y.num}`);
+        x.num = 10;
+        console.log(`x=${x.num} , y=${y.num}`);
+        let a = {num: 10};
+        let b = {num: 20};
+        console.log(a == b);
+    </script>
+</body>
+</html>

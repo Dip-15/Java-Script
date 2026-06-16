@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Define</title>
+</head>
+<body>
+    <script>
+        let product = {
+            company: 'Ango',
+            price: 599,
+            itemName: 'T-shirt',
+            //unlike variable type Properties should be defined using quotes;
+            'item-Number': 500021,
+            'shipping-Cost': 50, 
+        };
+        console.log(product);
+        // console.log(product.company);
+        // product.company = 'DipCroma';
+        product['company'] = 'DipCroma';
+        console.log(product.company);
+        //  Bracket notation use for kebab case properties variable name
+        // console.log(product['price']);
+        // console.log(product["itemName"]);
+        // console.log(product['item-Number']);
+         
+        let shippingCost = 'shipping-Cost';
+        console.log(product[shippingCost]);
+        console.log(shippingCost);
+
+        delete product.company;
+
+        product.name = 'sum';
+        console.log(product.name);
+        // delete product['company'];
+        console.log(product);
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Shortcuts</title>
+  </head>
+  <body>
+    <script>
+      let product = {
+        company: "Ango",
+        price: 599,
+        itemName: "T-shirt",
+        //unlike variable type Properties should be defined using quotes;
+        "item-Number": 500021,
+        "shipping-Cost": 50,
+      };
+      //Destructuring of object
+      //   let company = product.company;
+      let { company } = product;
+      console.log(company);
+      //"item-Number" should not be the variable in  JS for a property thats why we use new variable name itemNumber  
+      let { price, itemName, "item-Number": itemNumber } = product;
+      console.log(price);
+      console.log(itemName);
+      console.log(itemNumber);
+    </script>
+  </body>
+</html>

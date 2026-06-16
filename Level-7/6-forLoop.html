@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Loop</title>
+  </head>
+  <body>
+    <script>
+      //   for (let num = 1; num <= 10; num++) {
+      //     console.log("The num: " + num);
+      //   }
+
+      let nums = [1, 3, 5, 7, 6, 8, 2]; 
+      let sum = 0;
+      for (let i = 0; i < nums.length; i++) {
+        sum += nums[i];
+      }
+       console.log(`The sum of this array ${sum}`);
+
+       let squers = [];
+       for (let i = 0; i < nums.length; i++) {
+         squers[i]= nums[i]*nums[i];
+      }
+      console.log(squers);
+    </script>
+  </body>
+</html>

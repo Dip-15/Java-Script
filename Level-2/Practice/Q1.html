@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scrp, initial-scale=1.0">
+    <title>Display name from variable</title>
+</head>
+<body>
+    <h1 id="name-display"></h1>
+    <h2 id="gstDetails"></h2>
+   <script>
+     const myName = 'Dipankar';
+     document.querySelector('#name-display').innerText = myName;
+
+     let bagPrice = (15599 - (10/100 * 15599)) - 272; 
+     let jeansPrice = (2499 - (41/100*2499)) - 29 ;
+     const gst = 118/100;
+     let bagValue = Math.round(( bagPrice + jeansPrice + 25 + 20) * gst);
+     let bagSummery = `Your final Myntra Bag amount is ₹${bagValue}`;
+      // let bagSummery = 'Your final Myntra Bag amount is ₹' + bagValue;
+     console.log(bagSummery);
+    
+     document.querySelector('#gstDetails').innerText ='Your gst amount is ₹' + gst;
+     
+   </script> 
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Shorthand</title>
+</head>
+<body>
+    <script>
+        //The Property shorthand
+        let price = 500;
+         let product = {
+            company: 'Ango',
+            //this price value is coming from another side which var name is also price
+            price: price,
+            itemName: 'T-shirt',
+            //unlike variable type Properties should be defined using quotes;
+            'item-Number': 500021,
+            'shipping-Cost': 50, 
+         }
+          let product1 = {
+            company: 'Ango',
+            price,
+            itemName: 'T-shirt',
+            //unlike variable type Properties should be defined using quotes;
+            'item-Number': 500021,
+            'shipping-Cost': 50, 
+         }
+         console.log(price)
+         
+    </script>
+</body>
+</html>

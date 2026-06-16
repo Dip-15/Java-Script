@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Metro Ticket Discount Calculator</title>
+</head>
+<body>
+
+    <h2>Metro Ticket Calculator</h2>
+
+    <label>Age:</label>
+    <input type="number" id="age"><br><br>
+
+    <label>Gender:</label>
+    <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select><br><br>
+
+    <label>Ticket Price:</label>
+    <input type="number" id="price"><br><br>
+
+    <button onclick="calculateFare()">Calculate Fare</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function calculateFare() {
+            let age = parseInt(document.getElementById("age").value);
+            let gender = document.getElementById("gender").value;
+            let price = parseFloat(document.getElementById("price").value);
+
+            let discount = 0;
+
+            // Kids under 5 travel free
+            if (age < 5) {
+                discount = 100;
+            }
+            // Kids from 5 to 8 get 50% discount
+            else if (age <= 8) {
+                discount = 50;
+            }
+
+            // Females get 50% discount
+            if (gender === "female") {
+                discount = Math.max(discount, 50);
+            }
+
+            // Senior citizens over 65 get 70% discount
+            // (pay only 30% of ticket price)
+            if (age > 65) {
+                discount = Math.max(discount, 70);
+            }
+
+            let finalFare = price * (1 - discount / 100);
+
+            document.getElementById("result").innerHTML =
+                `Discount Applied: ${discount}%<br>
+                 Final Fare: ₹${finalFare.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+</html>

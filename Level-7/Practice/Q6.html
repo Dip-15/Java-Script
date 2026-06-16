@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop</title>
+</head>
+<body>
+    <script>
+        for(let i = 10; i>=1; i--){
+            console.log(`Num: ${i}`);
+        }
+        //Array
+        let arr = [1,-6,5,7,-98];
+        for( let i = 0 ; i < arr.length ; i++){
+            if( arr[i] < 0){
+                continue;
+            }
+            else{
+                console.log(`arr[${i}]: ${arr[i]}`);
+            }
+        }
+    </script>
+</body>
+</html>

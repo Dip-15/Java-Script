@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method Shorthand</title>
+  </head>
+  <body>
+    <script>
+      //The Method shorthand
+      let price = 500;
+      //  let product = {
+      //     company: 'Ango',
+      //     price,
+      //     itemName: 'T-shirt',
+      //     displayPrice: function(){
+      //         return`prie of this product is  ₹${this.price} `},
+      //     };
+      let product = {
+        company: "Ango",
+        price,
+        itemName: "T-shirt",
+        displayPrice() {
+          return `prie of this product is  ₹${this.price} `;
+        },
+      };
+      console.log(product.displayPrice());
+    </script>
+  </body>
+</html>

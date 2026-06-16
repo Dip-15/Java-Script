@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Compare Two Product</title>
+  </head>
+  <body>
+    <script>
+      let productx = {
+        company: "Ango",
+        price: 599,
+        itemName: "T-shirt",
+        "shipping-cost": 50,
+      };
+
+      let producty = {
+        company: "Ango",
+        price: 599,
+        itemName: "T-shirt",
+        "shipping-cost": 50,
+      };
+
+      let productz = {
+        company: "Ango",
+        price: 499,
+        itemName: "T-shirt",
+        "shipping-cost": 50,
+      };
+
+      function isIdenticalProduct(product1, product2) {
+        if (typeof product1 !== "object" || typeof product2 !== "object") {
+          console.log("Parameter passed was not an object");
+          return false;
+        }
+
+        if (product1 === product2) {
+          console.log("Bothes Parameters are the same object");
+          return true;
+        }
+
+        if (
+          product1.company === product2.company &&
+          product1.price === product2.price &&
+          product1.itemName === product2.itemName &&
+          product1["shipping-cost"] === product2["shipping-cost"]
+        ) {
+          console.log("All values are same");
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(isIdenticalProduct(productx, ""));
+      console.log(isIdenticalProduct(productx, producty));
+      console.log(isIdenticalProduct(productx, productx));  
+    </script>
+  </body>
+</html>

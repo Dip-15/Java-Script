@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Timeout</title>
+  </head>
+  <body>
+    <script>
+      let alaram = function () {
+        console.log("Good Morning My Jaggu PLease! wake-up");
+      };
+      // setTimeout(alaram,5000);
+      //  console.log('Alaram Set');
+
+      let interValid = setInterval(alaram, 1000);
+      setTimeout(() => {
+        clearTimeout(interValid);
+        console.log(`Alaram stoped`);
+      }, 5000);
+      console.log("Alaram Set");
+
+      //Set Interval
+      //   let count = 5;
+      //   console.log("Set Alaram");
+      //   let timer = setInterval(() => {
+      //     console.log(`Time: ${count}`);
+      //     count--;
+      //     if (count === 0) {
+      //       console.log(`Good Morning My Jaggu PLease! wake-up`);
+      //       clearInterval(timer);
+      //     }
+      //   }, 1000);
+    </script>
+  </body>
+</html>

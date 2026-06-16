@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create The Button another method</title>
+  </head>
+  <style>
+    #click {
+      height: 50px;
+      width: 50px;
+      font-size: 25px;
+      border: none;
+      border-radius: 5px;
+    }
+    .js-odd {
+      background-color: crimson;
+    }
+    .js-even {
+      background-color: greenyellow;
+    }
+  </style>
+  <body> 
+
+    <button id="click" onclick="onLoad()">0</button>
+    <script>
+      let num =JSON.parse(localStorage.getItem('clickedTime')) || 0;
+      function onLoad(){
+        num++ ;
+        localStorage.setItem('clickedTimes', JSON.stringify(num));
+        updateButton();
+      }
+      function updateButton(){
+        let button1 = document.querySelector('#click');
+        button1.innerText = num;
+        if (num % 2 === 0) { 
+          button1.classList.remove("js-odd"); 
+          button1.classList.add("js-even"); 
+          } 
+          else { 
+          button1.classList.remove("js-even"); 
+          button1.classList.add("js-odd"); 
+          }
+      }
+      updateButton();
+      localStorage.clear();
+    </script>
+  </body>
+</html>

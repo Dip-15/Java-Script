@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Button</title>
+    <style>
+      .button {
+        height: 30px;
+        width: 100px;
+      }
+      .button-next {
+        height: 60px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="button">click-me</button>
+    <script>
+      let button1 = document.querySelector(".button");
+      button1.addEventListener("click", (big) => {
+        setInterval(double, 2000);
+      });
+      function double() {
+        let button1 = document.querySelector(".button");
+        button1.classList.add('button-next')
+      }
+    </script>
+  </body>
+</html>

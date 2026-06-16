@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counting Prime</title>
+  </head>
+  <body>
+    <script>
+      for (let num = 1; num < 10; num++) {
+        let itPrime = 1;
+        if (num === 1) {
+          itPrime = 0;
+        }
+        for (let j = 2; j < num; j++) {
+          if (num % j === 0) {
+            itPrime = 0;
+            break;
+          }
+        }
+        if (itPrime) {
+          console.log(`${num} is prime`);
+        } else {
+          console.log(`${num} is not prime`);
+        }
+      }
+    </script>
+  </body>
+</html>

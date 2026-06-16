@@ -1,0 +1,27 @@
+cv <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If_Alternates</title>
+</head>
+<body>
+   <script>
+    let age =21;
+    //Ternary
+    let result = age>18?'Adult':'Minor';
+    console.log(result);
+    // Guard use when left side value is falsy;
+    let age1='';
+    console.log(age1.length);
+    let finalage1 = age1||18;
+    console.log(age1);
+    console.log(finalage1);
+    //Default use only null and undefined as a falsy;
+    let age2 ='';
+    let finalage2 = age2 ?? 20;
+    console.log(age2);
+    console.log(finalage2);
+   </script> 
+</body>
+</html>
