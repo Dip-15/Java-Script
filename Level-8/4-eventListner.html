@@ -8,17 +8,17 @@
   <body>
     <button id="my-button">Click-Me</button>
     <script>
-              let button1 = document.querySelector('#my-button');
-
-            //   button1.addEventListener('click', event => console.log('I am clicked')); 
-            //   First one is equivalent to :
-            //   button1.addEventListener('click', function(event) {
-            //   console.log('I am clicked');} ); 
-             let behaviour = event => console.log('I am clicked');
-              button1.addEventListener('click', behaviour);
-             let behaviour1 = event1 => console.log('This is second time type');
-              button1.addEventListener('click', behaviour1);
-              button1.removeEventListener('click',behaviour);
+      
+        let button1 = document.querySelector('#my-button');
+          //   button1.addEventListener('click', event => console.log('I am clicked')); 
+          //   First one is equivalent to :
+          //   button1.addEventListener('click', function(event) {
+          //   console.log('I am clicked');} ); 
+       let behaviour = event => console.log('I am clicked');
+             button1.addEventListener('click', behaviour);
+       let behaviour1 = event1 => console.log('This is second time type');
+       button1.addEventListener('click', behaviour1);
+       button1.removeEventListener('click',behaviour);
 
     </script>
   </body>
