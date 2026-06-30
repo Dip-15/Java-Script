@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Element</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="my-class">This is the div</div>
     <script>
-        let create = document.createElement('Button');
-       let create1 = document.createElement('Button');
-       create.innerText = 'Click-Me';
-       document.querySelector('.my-class').appendChild(create);
+      let create = document.createElement("Button");
+      let create1 = document.createElement("Button");
+      create.innerText = "Click-Me";
+      document.querySelector(".my-class").appendChild(create);
       //  document.querySelector('.my-class').removeChild(create);
-       create1.innerText = 'click-your';
-       document.querySelector('.my-class').replaceChild(create1 , create);
+      create1.innerText = "click-your";
+      document.querySelector(".my-class").replaceChild(create1, create);
     </script>
-</body>
+  </body>
 </html>
