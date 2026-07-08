@@ -1,0 +1,48 @@
+body {
+        margin: 0;
+        background: #001a00;
+        color: #00ff00;
+        font-family: "Courier New", monospace;
+        padding: 20px;
+        overflow: hidden;
+    }
+
+    #terminal {
+        white-space: pre-line;
+        font-size: 1.2rem;
+        line-height: 1.8;
+    }
+
+    .line {
+        margin-bottom: 10px;
+    }
+
+    .dots {
+        display: inline-block;
+        width: 24px;
+    }
+
+    .dots::after {
+        content: '';
+        animation: blinkDots 1s infinite steps(4);
+    }
+
+    @keyframes blinkDots {
+        0%   { content: ''; }
+        25%  { content: '.'; }
+        50%  { content: '..'; }
+        75%  { content: '...'; }
+        100% { content: ''; }
+    }
+
+    .cursor {
+        display: inline-block;
+        width: 10px;
+        animation: cursorBlink 0.8s infinite;
+    }
+
+    @keyframes cursorBlink {
+        50% {
+            opacity: 0;
+        }
+    }
