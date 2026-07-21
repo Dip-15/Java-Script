@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .box {
+        width: 45px;
+        height: 45px;
+        margin: 5px;
+        /* padding: px; */
+        border: 2px solid black;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">Box1</div>
+      <div class="box">Box2</div>
+      <div class="box">Box3</div>
+      <div class="box">Box4</div>
+      <div class="box">Box5</div>
+    </div>
+    <script>
+      console.log("Hello world");
+      // Hello world
+      // document.body.childNodes
+      // NodeList(9) [text, div.container, text, script, text, comment, text, script, text]
+      // document.body.childNodes[1]
+      // <div class=​"container">​…​</div>​
+      // document.body.childNodes[1].childNodes
+      // NodeList(11) [text, div.box, text, div.box, text, div.box, text, div.box, text, div.box, text]
+      // let cont = document.body.childNodes[1]
+      // undefined
+      // cont
+      // <div class=​"container">​…​</div>​
+      // cont.firstChild
+      // #text
+      // cont.lastChild
+      // #text
+      // cont.childNodes[1]
+      // <div class=​"box">​Box1​</div>​flex
+      // cont.childNodes[2]
+      // #text
+      // cont.firstElementChild
+      // <div class=​"box">​Box1​</div>​flex
+    </script>
+  </body>
+</html>
